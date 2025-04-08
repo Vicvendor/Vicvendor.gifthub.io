@@ -11,6 +11,8 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #111;
       color: #f1f1f1;
+      width: 100%;
+      overflow-x: hidden;
     }
 
     header {
@@ -21,7 +23,7 @@
     }
 
     header h1 {
-      font-size: 2.5em;
+      font-size: 2em;
       margin: 0;
       color: #fff;
       letter-spacing: 2px;
@@ -34,12 +36,18 @@
       letter-spacing: 1px;
     }
 
+    /* Center content on page */
+    .container {
+      width: 90%;
+      margin: 0 auto;
+    }
+
     /* Product Grid Layout */
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensures the grid is flexible */
+      grid-template-columns: 1fr;
       gap: 20px;
-      padding: 40px 20px;
+      padding: 40px 0;
     }
 
     .product {
@@ -51,7 +59,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 300px;
+      height: auto;
     }
 
     .product:hover {
@@ -99,10 +107,10 @@
       color: #777;
     }
 
-    /* Responsive Design */
+    /* Mobile Responsive Design */
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2em;
+        font-size: 1.8em;
       }
 
       .product-grid {
@@ -111,6 +119,45 @@
 
       .product {
         height: auto;
+      }
+
+      .price-sell {
+        font-size: 16px;
+      }
+
+      .order-info {
+        font-size: 12px;
+      }
+
+      header p {
+        font-size: 14px;
+      }
+    }
+
+    /* Extra padding and adjustments for smaller screens */
+    @media (max-width: 480px) {
+      header {
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      .product {
+        padding: 15px;
+      }
+
+      .price-sell {
+        font-size: 14px;
+      }
+
+      .order-info {
+        font-size: 10px;
+      }
+
+      footer {
+        font-size: 12px;
       }
     }
   </style>
@@ -123,57 +170,31 @@
     <p>Better Prices Than the Stores</p>
   </header>
 
-  <!-- Product Grid -->
-  <section class="product-grid">
-    <div class="product">
-      <h3>iPhones</h3>
-      <p class="price-sell">Sell: $200+</p>
-      <div class="product-footer">
-        <p class="order-info">To order, contact us:</p>
-        <p class="order-info">Email: <a href="mailto:maxfoilglenn@gmail.com" style="color: #ffcc00;">maxfoilglenn@gmail.com</a></p>
-        <p class="order-info">Call/Text: <a href="tel:+61451412080" style="color: #ffcc00;">+61 451 412 080</a></p>
-        <p class="order-info">Cash in hand, meet in person for the transaction.</p>
+  <!-- Container for content -->
+  <div class="container">
+    <!-- Product Grid -->
+    <section class="product-grid">
+      <div class="product">
+        <h3>iPhones</h3>
+        <p class="price-sell">$200+</p>
+        <div class="product-footer">
+          <p class="order-info">Order via Email, Call, or Text: Cash in hand and meet in person.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="product">
-      <h3>AirPods Pro</h3>
-      <p class="price-sell">Sell: $80</p>
-      <div class="product-footer">
-        <p class="order-info">To order, contact us:</p>
-        <p class="order-info">Email: <a href="mailto:maxfoilglenn@gmail.com" style="color: #ffcc00;">maxfoilglenn@gmail.com</a></p>
-        <p class="order-info">Call/Text: <a href="tel:+61451412080" style="color: #ffcc00;">+61 451 412 080</a></p>
-        <p class="order-info">Cash in hand, meet in person for the transaction.</p>
+      <div class="product">
+        <h3>AirPods Max</h3>
+        <p class="price-sell">$80</p>
+        <div class="product-footer">
+          <p class="order-info">Order via Email, Call, or Text: Cash in hand and meet in person.</p>
+        </div>
       </div>
-    </div>
-
-    <div class="product">
-      <h3>AirPods Max</h3>
-      <p class="price-sell">Sell: $120</p>
-      <div class="product-footer">
-        <p class="order-info">To order, contact us:</p>
-        <p class="order-info">Email: <a href="mailto:maxfoilglenn@gmail.com" style="color: #ffcc00;">maxfoilglenn@gmail.com</a></p>
-        <p class="order-info">Call/Text: <a href="tel:+61451412080" style="color: #ffcc00;">+61 451 412 080</a></p>
-        <p class="order-info">Cash in hand, meet in person for the transaction.</p>
-      </div>
-    </div>
-
-    <div class="product">
-      <h3>Sp5der Hoodie</h3>
-      <p class="price-sell">Sell: $60</p>
-      <div class="product-footer">
-        <p class="order-info">To order, contact us:</p>
-        <p class="order-info">Email: <a href="mailto:maxfoilglenn@gmail.com" style="color: #ffcc00;">maxfoilglenn@gmail.com</a></p>
-        <p class="order-info">Call/Text: <a href="tel:+61451412080" style="color: #ffcc00;">+61 451 412 080</a></p>
-        <p class="order-info">Cash in hand, meet in person for the transaction.</p>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <!-- Footer -->
   <footer>
     <p>Contact: maxfoilglenn@gmail.com | +61 451 412 080</p>
   </footer>
-
 </body>
 </html>
