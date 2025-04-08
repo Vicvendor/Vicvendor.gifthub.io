@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product List</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .product {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px;
+      width: 100%;
+      max-width: 150px;
+      text-align: center;
+      box-sizing: border-box;
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      border-color: #ccc;
+    }
+
+    .product h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .product p {
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    .price {
+      font-size: 1.2em;
+      color: #007bff;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      .product {
+        max-width: 100%;
+        margin: 10px 0;
+      }
+
+      header h1 {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Product Catalog</h1>
+  </header>
+
+  <!-- Product List -->
+  <div class="product-list">
+    <div class="product">
+      <h3>iPhone</h3>
+      <p class="price">$200+ (Depending on model)</p>
+    </div>
+
+    <div class="product">
+      <h3>AirPods Pro</h3>
+      <p class="price">$30</p>
+    </div>
+
+    <div class="product">
+      <h3>AirPods Max</h3>
+      <p class="price">$50</p>
+    </div>
+
+    <div class="product">
+      <h3>Sp5der Hoodie</h3>
+      <p class="price">$30</p>
+    </div>
+
+    <div class="product">
+      <h3>Cologne</h3>
+      <p class="price">$30</p>
+    </div>
+
+    <div class="product">
+      <h3>Nike</h3>
+      <p class="price">$40</p>
+    </div>
+
+    <div class="product">
+      <h3>Watch</h3>
+      <p class="price">$75</p>
+    </div>
+
+    <div class="product">
+      <h3>Clothes</h3>
+      <p class="price">$25</p>
+    </div>
+
+    <div class="product">
+      <h3>Shoes</h3>
+      <p class="price">$60</p>
+    </div>
+
+    <div class="product">
+      <h3>Ralph Lauren Knitted</h3>
+      <p class="price">$15 (Bulk: $100)</p>
+    </div>
+
+    <div class="product">
+      <h3>North Face Hoodie</h3>
+      <p class="price">$15 (Bulk: $100)</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact us to place your order!</p>
+    <p>Phone: 61 451 412 080</p>
+    <p>Email: <a href="mailto:maxfoilglenn@gmail.com">maxfoilglenn@gmail.com</a></p>
+    <p><strong>Payment:</strong> Cash in hand, must be collected in person.</p>
+    <p><strong>Location:</strong> Melbourne, Victoria</p>
+  </footer>
+
+</body>
+</html>
