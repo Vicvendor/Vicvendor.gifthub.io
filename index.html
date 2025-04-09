@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product List</title>
+  <title>Product Catalog</title>
   <style>
     body {
       margin: 0;
@@ -22,6 +22,24 @@
     header h1 {
       margin: 0;
       font-size: 1.5em;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+    }
+
+    .menu a {
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      flex: 1;
+    }
+
+    .menu a:hover {
+      background-color: #575757;
     }
 
     .instock {
@@ -100,40 +118,15 @@
       header h1 {
         font-size: 1.2em;
       }
-    }
 
-    /* Dropdown menu */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
+      .menu {
+        flex-direction: column;
+      }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 160px;
-      z-index: 1;
-      border-radius: 5px;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      padding: 10px;
+      .menu a {
+        text-align: left;
+      }
     }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 10px 20px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
-
   </style>
 </head>
 <body>
@@ -143,99 +136,123 @@
     <h1>Product Catalog</h1>
   </header>
 
+  <!-- Menu -->
+  <div class="menu">
+    <a href="#all-products">All Products</a>
+    <a href="#electronics">Electronics</a>
+    <a href="#clothing">Clothing</a>
+    <a href="#footwear">Footwear</a>
+    <a href="#watches-cologne">Watches & Cologne</a>
+  </div>
+
   <!-- In Stock Now Section -->
   <div class="instock">
     <h2>✅ In Stock Now</h2>
     <p>2x AirPods Pro</p>
-    <p>1x iPhone (Model TBD - Contact for details)</p>
+    <p>1x iPhone Series 16</p>
   </div>
 
-  <!-- Dropdown Menu for Categories -->
-  <div class="dropdown">
-    <button>Product Categories</button>
-    <div class="dropdown-content">
-      <a href="#general">General</a>
-      <a href="#electronics">Electronics</a>
-      <a href="#clothing">Clothing</a>
-      <a href="#footwear">Footwear & Accessories</a>
-    </div>
-  </div>
-
-  <!-- General Products -->
-  <div class="product-list" id="general">
+  <!-- All Products -->
+  <div id="all-products" class="product-list">
     <div class="product">
-      <h3>iPhone</h3>
+      <h3>iPhone Series 16</h3>
       <p class="price">$200+ (Depending on model)</p>
-      <p>Description: Choose from a range of iPhones. Prices vary depending on model and condition. Contact for details.</p>
     </div>
-
     <div class="product">
       <h3>AirPods Pro</h3>
       <p class="price">$30</p>
-      <p>Description: Original AirPods Pro. Excellent sound quality, comfortable design, and great battery life.</p>
     </div>
-
     <div class="product">
       <h3>AirPods Max</h3>
       <p class="price">$50</p>
-      <p>Description: Over-ear AirPods Max with exceptional sound quality and noise cancellation.</p>
     </div>
-  </div>
-
-  <!-- Electronics Products -->
-  <div class="product-list" id="electronics">
     <div class="product">
       <h3>Sp5der Hoodie</h3>
       <p class="price">$30</p>
-      <p>Description: Comfortable hoodie with a stylish design. Great for casual wear.</p>
     </div>
-
     <div class="product">
       <h3>Cologne</h3>
       <p class="price">$30</p>
-      <p>Description: Fresh and long-lasting fragrance for everyday wear.</p>
     </div>
-
     <div class="product">
       <h3>Nike</h3>
       <p class="price">$40</p>
-      <p>Description: High-quality Nike products including shoes and apparel. Comfortable and stylish.</p>
     </div>
-  </div>
-
-  <!-- Clothing Products -->
-  <div class="product-list" id="clothing">
     <div class="product">
       <h3>Watch</h3>
       <p class="price">$75</p>
-      <p>Description: Trendy and fashionable watch with great durability and design.</p>
     </div>
-
     <div class="product">
       <h3>Clothes</h3>
       <p class="price">$25</p>
-      <p>Description: Various clothing items, from casual to semi-formal. Great for everyday wear.</p>
     </div>
-  </div>
-
-  <!-- Footwear & Accessories -->
-  <div class="product-list" id="footwear">
     <div class="product">
       <h3>Shoes</h3>
       <p class="price">$60</p>
-      <p>Description: A variety of stylish and comfortable shoes, perfect for any occasion.</p>
     </div>
-
     <div class="product">
       <h3>Ralph Lauren Knitted</h3>
       <p class="price">$15 (Bulk: $100)</p>
-      <p>Description: Comfortable and stylish knitted sweaters. Available in bulk at a discounted price.</p>
     </div>
-
     <div class="product">
       <h3>North Face Hoodie</h3>
       <p class="price">$15 (Bulk: $100)</p>
-      <p>Description: Durable and stylish North Face hoodies. Available in bulk at a discounted price.</p>
+    </div>
+  </div>
+
+  <!-- Electronics -->
+  <div id="electronics" class="product-list">
+    <div class="product">
+      <h3>iPhone Series 16</h3>
+      <p class="price">$200+ (Depending on model)</p>
+    </div>
+    <div class="product">
+      <h3>AirPods Pro</h3>
+      <p class="price">$30</p>
+    </div>
+    <div class="product">
+      <h3>AirPods Max</h3>
+      <p class="price">$50</p>
+    </div>
+  </div>
+
+  <!-- Clothing -->
+  <div id="clothing" class="product-list">
+    <div class="product">
+      <h3>Sp5der Hoodie</h3>
+      <p class="price">$30</p>
+    </div>
+    <div class="product">
+      <h3>Ralph Lauren Knitted</h3>
+      <p class="price">$15 (Bulk: $100)</p>
+    </div>
+    <div class="product">
+      <h3>North Face Hoodie</h3>
+      <p class="price">$15 (Bulk: $100)</p>
+    </div>
+  </div>
+
+  <!-- Footwear -->
+  <div id="footwear" class="product-list">
+    <div class="product">
+      <h3>Nike</h3>
+      <p class="price">$40</p>
+    </div>
+    <div class="product">
+      <h3>Shoes</h3>
+      <p class="price">$60</p>
+    </div>
+  </div>
+
+  <!-- Watches & Cologne -->
+  <div id="watches-cologne" class="product-list">
+    <div class="product">
+      <h3>Watch</h3>
+      <p class="price">$75</p>
+    </div>
+    <div class="product">
+      <h3>Cologne</h3>
+      <p class="price">$30</p>
     </div>
   </div>
 
@@ -246,7 +263,6 @@
     <p>Email: <a href="mailto:maxfoilglenn@gmail.com">maxfoilglenn@gmail.com</a></p>
     <p><strong>Payment:</strong> Cash in hand, must be collected in person.</p>
     <p><strong>Location:</strong> Melbourne, Victoria</p>
-    <p><strong>Follow us on TikTok:</strong> <a href="https://www.tiktok.com/@max.glenn41">max.glenn41</a></p>
   </footer>
 
 </body>
