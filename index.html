@@ -24,16 +24,41 @@
       font-size: 1.5em;
     }
 
+    nav {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 15px;
+      background-color: #333;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
     .instock {
       background-color: #e0ffe0;
       padding: 15px;
       text-align: center;
-      font-size: 1em;
+      font-size: 1.2em;
     }
 
     .instock h2 {
       margin-top: 0;
       color: #2b8a3e;
+    }
+
+    .section {
+      display: none;
+      padding: 20px;
     }
 
     .product-list {
@@ -110,79 +135,87 @@
     <h1>Max's Deals & Products</h1>
   </header>
 
-  <!-- In Stock Now Section -->
+  <!-- Navigation Menu -->
+  <nav>
+    <a href="#" onclick="showSection('electronics')">Electronics</a>
+    <a href="#" onclick="showSection('clothing')">Clothing</a>
+    <a href="#" onclick="showSection('footwear')">Footwear</a>
+    <a href="#" onclick="showSection('fragrances')">Fragrances</a>
+  </nav>
+
+  <!-- In Stock Section -->
   <div class="instock">
     <h2>✅ In Stock Now</h2>
-    <p>1x iPhone (200+ depending on model)</p>
-    <p>2x AirPods Pro - $30 each</p>
+    <p>2x AirPods Pro</p>
+    <p>1x iPhone Series 16</p>
   </div>
 
-  <!-- Product List -->
-  <div class="product-list">
-    <div class="product">
-      <h3>iPhone</h3>
-      <p class="price">$200+ (Depending on model)</p>
-      <p>Latest iPhone with powerful performance.</p>
-    </div>
+  <!-- Electronics Section -->
+  <div id="electronics" class="section">
+    <h2>Electronics</h2>
+    <div class="product-list">
+      <div class="product">
+        <h3>iPhone</h3>
+        <p class="price">$200+ (Depending on model)</p>
+      </div>
 
-    <div class="product">
-      <h3>AirPods Pro</h3>
-      <p class="price">$30</p>
-      <p>High-quality sound, noise cancellation, and comfortable fit.</p>
-    </div>
+      <div class="product">
+        <h3>AirPods Pro</h3>
+        <p class="price">$30</p>
+      </div>
 
-    <div class="product">
-      <h3>AirPods Max</h3>
-      <p class="price">$50</p>
-      <p>Over-ear headphones with high-fidelity audio.</p>
+      <div class="product">
+        <h3>AirPods Max</h3>
+        <p class="price">$50</p>
+      </div>
     </div>
+  </div>
 
-    <div class="product">
-      <h3>Sp5der Hoodie</h3>
-      <p class="price">$30</p>
-      <p>Stylish and comfortable hoodie with a unique design.</p>
+  <!-- Clothing Section -->
+  <div id="clothing" class="section">
+    <h2>Clothing</h2>
+    <div class="product-list">
+      <div class="product">
+        <h3>Sp5der Hoodie</h3>
+        <p class="price">$30</p>
+      </div>
+
+      <div class="product">
+        <h3>Ralph Lauren Knitted</h3>
+        <p class="price">$15 (Bulk: $100)</p>
+      </div>
+
+      <div class="product">
+        <h3>North Face Hoodie</h3>
+        <p class="price">$15 (Bulk: $100)</p>
+      </div>
     </div>
+  </div>
 
-    <div class="product">
-      <h3>Cologne</h3>
-      <p class="price">$30</p>
-      <p>Premium fragrance for a fresh and confident scent.</p>
+  <!-- Footwear Section -->
+  <div id="footwear" class="section">
+    <h2>Footwear</h2>
+    <div class="product-list">
+      <div class="product">
+        <h3>Nike</h3>
+        <p class="price">$40</p>
+      </div>
+
+      <div class="product">
+        <h3>Shoes</h3>
+        <p class="price">$60</p>
+      </div>
     </div>
+  </div>
 
-    <div class="product">
-      <h3>Nike</h3>
-      <p class="price">$40</p>
-      <p>Classic Nike sneakers, perfect for every occasion.</p>
-    </div>
-
-    <div class="product">
-      <h3>Watch</h3>
-      <p class="price">$75</p>
-      <p>Stylish and durable watch with modern design.</p>
-    </div>
-
-    <div class="product">
-      <h3>Clothes</h3>
-      <p class="price">$25</p>
-      <p>Trendy clothing that’s perfect for casual wear.</p>
-    </div>
-
-    <div class="product">
-      <h3>Shoes</h3>
-      <p class="price">$60</p>
-      <p>Comfortable and stylish shoes for all-day wear.</p>
-    </div>
-
-    <div class="product">
-      <h3>Ralph Lauren Knitted</h3>
-      <p class="price">$15 (Bulk: $100)</p>
-      <p>Quality Ralph Lauren knitted sweater, available in bulk.</p>
-    </div>
-
-    <div class="product">
-      <h3>North Face Hoodie</h3>
-      <p class="price">$15 (Bulk: $100)</p>
-      <p>Classic North Face hoodie, stylish and comfortable.</p>
+  <!-- Fragrances Section -->
+  <div id="fragrances" class="section">
+    <h2>Fragrances</h2>
+    <div class="product-list">
+      <div class="product">
+        <h3>Cologne</h3>
+        <p class="price">$30</p>
+      </div>
     </div>
   </div>
 
@@ -194,6 +227,16 @@
     <p><strong>Payment:</strong> Cash in hand, must be collected in person.</p>
     <p><strong>Location:</strong> Melbourne, Victoria</p>
   </footer>
+
+  <script>
+    // Function to display specific section based on the category clicked
+    function showSection(section) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.style.display = 'none'); // Hide all sections
+      const activeSection = document.getElementById(section);
+      if (activeSection) activeSection.style.display = 'block'; // Show clicked section
+    }
+  </script>
 
 </body>
 </html>
