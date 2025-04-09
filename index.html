@@ -101,6 +101,39 @@
         font-size: 1.2em;
       }
     }
+
+    /* Dropdown menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      z-index: 1;
+      border-radius: 5px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
   </style>
 </head>
 <body>
@@ -113,66 +146,90 @@
   <!-- In Stock Now Section -->
   <div class="instock">
     <h2>✅ In Stock Now</h2>
-    <p>1x iPhone 16 Series</p>
     <p>2x AirPods Pro</p>
+    <p>1x iPhone (Model TBD - Contact for details)</p>
+  </div>
+
+  <!-- Dropdown Menu for Product Categories -->
+  <div class="dropdown">
+    <button>Product Categories</button>
+    <div class="dropdown-content">
+      <a href="#iphone">iPhone</a>
+      <a href="#airpods">AirPods</a>
+      <a href="#apparel">Apparel</a>
+      <a href="#other">Other Products</a>
+    </div>
   </div>
 
   <!-- Product List -->
   <div class="product-list">
-    <div class="product">
+
+    <div class="product" id="iphone">
       <h3>iPhone</h3>
       <p class="price">$200+ (Depending on model)</p>
+      <p>Description: Choose from a range of iPhones. Prices vary depending on model and condition. Contact for details.</p>
     </div>
 
-    <div class="product">
+    <div class="product" id="airpods">
       <h3>AirPods Pro</h3>
       <p class="price">$30</p>
+      <p>Description: Original AirPods Pro. Excellent sound quality, comfortable design, and great battery life.</p>
     </div>
 
     <div class="product">
       <h3>AirPods Max</h3>
       <p class="price">$50</p>
+      <p>Description: Over-ear AirPods Max with exceptional sound quality and noise cancellation.</p>
     </div>
 
-    <div class="product">
+    <div class="product" id="apparel">
       <h3>Sp5der Hoodie</h3>
       <p class="price">$30</p>
+      <p>Description: Comfortable hoodie with a stylish design. Great for casual wear.</p>
     </div>
 
     <div class="product">
       <h3>Cologne</h3>
       <p class="price">$30</p>
+      <p>Description: Fresh and long-lasting fragrance for everyday wear.</p>
     </div>
 
     <div class="product">
       <h3>Nike</h3>
       <p class="price">$40</p>
+      <p>Description: High-quality Nike products including shoes and apparel. Comfortable and stylish.</p>
     </div>
 
-    <div class="product">
+    <div class="product" id="other">
       <h3>Watch</h3>
       <p class="price">$75</p>
+      <p>Description: Trendy and fashionable watch with great durability and design.</p>
     </div>
 
     <div class="product">
       <h3>Clothes</h3>
       <p class="price">$25</p>
+      <p>Description: Various clothing items, from casual to semi-formal. Great for everyday wear.</p>
     </div>
 
     <div class="product">
       <h3>Shoes</h3>
       <p class="price">$60</p>
+      <p>Description: A variety of stylish and comfortable shoes, perfect for any occasion.</p>
     </div>
 
     <div class="product">
       <h3>Ralph Lauren Knitted</h3>
       <p class="price">$15 (Bulk: $100)</p>
+      <p>Description: Comfortable and stylish knitted sweaters. Available in bulk at a discounted price.</p>
     </div>
 
     <div class="product">
       <h3>North Face Hoodie</h3>
       <p class="price">$15 (Bulk: $100)</p>
+      <p>Description: Durable and stylish North Face hoodies. Available in bulk at a discounted price.</p>
     </div>
+
   </div>
 
   <!-- Footer -->
@@ -182,6 +239,7 @@
     <p>Email: <a href="mailto:maxfoilglenn@gmail.com">maxfoilglenn@gmail.com</a></p>
     <p><strong>Payment:</strong> Cash in hand, must be collected in person.</p>
     <p><strong>Location:</strong> Melbourne, Victoria</p>
+    <p><strong>Follow us on TikTok:</strong> <a href="https://www.tiktok.com/@max.glenn41">max.glenn41</a></p>
   </footer>
 
 </body>
