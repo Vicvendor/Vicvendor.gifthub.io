@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product Catalog</title>
+  <title>Max's Deals & Products</title>
   <style>
     body {
       margin: 0;
@@ -24,22 +24,58 @@
       font-size: 1.5em;
     }
 
-    .menu {
-      display: flex;
-      justify-content: center;
-      background-color: #333;
-    }
-
-    .menu a {
-      padding: 14px 20px;
-      color: white;
-      text-decoration: none;
+    .instock {
+      background-color: #e0ffe0;
+      padding: 15px;
       text-align: center;
-      flex: 1;
+      font-size: 1em;
     }
 
-    .menu a:hover {
-      background-color: #575757;
+    .instock h2 {
+      margin-top: 0;
+      color: #2b8a3e;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .product {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px;
+      width: 100%;
+      max-width: 150px;
+      text-align: center;
+      box-sizing: border-box;
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      border-color: #ccc;
+    }
+
+    .product h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .product p {
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    .price {
+      font-size: 1.2em;
+      color: #007bff;
+      font-weight: bold;
+      margin: 10px 0;
     }
 
     footer {
@@ -56,12 +92,13 @@
     }
 
     @media (max-width: 600px) {
-      .menu {
-        flex-direction: column;
+      .product {
+        max-width: 100%;
+        margin: 10px 0;
       }
 
-      .menu a {
-        text-align: left;
+      header h1 {
+        font-size: 1.2em;
       }
     }
   </style>
@@ -70,15 +107,83 @@
 
   <!-- Header -->
   <header>
-    <h1>Product Catalog</h1>
+    <h1>Max's Deals & Products</h1>
   </header>
 
-  <!-- Menu -->
-  <div class="menu">
-    <a href="electronics.html">Electronics</a>
-    <a href="clothing.html">Clothing</a>
-    <a href="footwear.html">Footwear</a>
-    <a href="cologne-watches.html">Cologne & Watches</a>
+  <!-- In Stock Now Section -->
+  <div class="instock">
+    <h2>✅ In Stock Now</h2>
+    <p>1x iPhone (200+ depending on model)</p>
+    <p>2x AirPods Pro - $30 each</p>
+  </div>
+
+  <!-- Product List -->
+  <div class="product-list">
+    <div class="product">
+      <h3>iPhone</h3>
+      <p class="price">$200+ (Depending on model)</p>
+      <p>Latest iPhone with powerful performance.</p>
+    </div>
+
+    <div class="product">
+      <h3>AirPods Pro</h3>
+      <p class="price">$30</p>
+      <p>High-quality sound, noise cancellation, and comfortable fit.</p>
+    </div>
+
+    <div class="product">
+      <h3>AirPods Max</h3>
+      <p class="price">$50</p>
+      <p>Over-ear headphones with high-fidelity audio.</p>
+    </div>
+
+    <div class="product">
+      <h3>Sp5der Hoodie</h3>
+      <p class="price">$30</p>
+      <p>Stylish and comfortable hoodie with a unique design.</p>
+    </div>
+
+    <div class="product">
+      <h3>Cologne</h3>
+      <p class="price">$30</p>
+      <p>Premium fragrance for a fresh and confident scent.</p>
+    </div>
+
+    <div class="product">
+      <h3>Nike</h3>
+      <p class="price">$40</p>
+      <p>Classic Nike sneakers, perfect for every occasion.</p>
+    </div>
+
+    <div class="product">
+      <h3>Watch</h3>
+      <p class="price">$75</p>
+      <p>Stylish and durable watch with modern design.</p>
+    </div>
+
+    <div class="product">
+      <h3>Clothes</h3>
+      <p class="price">$25</p>
+      <p>Trendy clothing that’s perfect for casual wear.</p>
+    </div>
+
+    <div class="product">
+      <h3>Shoes</h3>
+      <p class="price">$60</p>
+      <p>Comfortable and stylish shoes for all-day wear.</p>
+    </div>
+
+    <div class="product">
+      <h3>Ralph Lauren Knitted</h3>
+      <p class="price">$15 (Bulk: $100)</p>
+      <p>Quality Ralph Lauren knitted sweater, available in bulk.</p>
+    </div>
+
+    <div class="product">
+      <h3>North Face Hoodie</h3>
+      <p class="price">$15 (Bulk: $100)</p>
+      <p>Classic North Face hoodie, stylish and comfortable.</p>
+    </div>
   </div>
 
   <!-- Footer -->
