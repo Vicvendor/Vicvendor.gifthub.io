@@ -3,81 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Max Glenn's Plug</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Product Catalog</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    .instock {
+      background-color: #e0ffe0;
+      padding: 15px;
+      text-align: center;
+      font-size: 1em;
+    }
+
+    .instock h2 {
+      margin-top: 0;
+      color: #2b8a3e;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .product {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px;
+      width: 100%;
+      max-width: 150px;
+      text-align: center;
+      box-sizing: border-box;
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      border-color: #ccc;
+    }
+
+    .product h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .product p {
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    .price {
+      font-size: 1.2em;
+      color: #007bff;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .product {
+        max-width: 100%;
+        margin: 10px 0;
+      }
+
+      header h1 {
+        font-size: 1.2em;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body>
+
   <!-- Header -->
-  <header class="bg-black text-white p-6 text-center">
-    <h1 class="text-3xl font-bold">Max Glenn's Plug</h1>
-    <p class="text-sm">TikTok: @max.glenn41 • DM to order</p>
+  <header>
+    <h1>Product Catalog</h1>
   </header>
 
-  <!-- Products Section -->
-  <section class="p-6">
-    <h2 class="text-2xl font-semibold mb-4">🔥 Products 🔥</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <div class="bg-white shadow rounded p-4">
-        <h3 class="text-lg font-bold">iPhone (varies by model)</h3>
-        <p>Price: $80</p>
-      </div>
-      <div class="bg-white shadow rounded p-4">
-        <h3 class="text-lg font-bold">AirPods Pro</h3>
-        <p>Price: $30</p>
-      </div>
-      <div class="bg-white shadow rounded p-4">
-        <h3 class="text-lg font-bold">AirPods Max</h3>
-        <p>Price: $50</p>
-      </div>
-      <div class="bg-white shadow rounded p-4">
-        <h3 class="text-lg font-bold">Sp5der Hoodie</h3>
-        <p>Price: $30</p>
-      </div>
-      <div class="bg-white shadow rounded p-4">
-        <h3 class="text-lg font-bold">Cologne</h3>
-        <p>Price: $30</p>
-      </div>
-      <div class="bg-white shadow rounded p-4">
-        <h3 class="text-lg font-bold">Nike</h3>
-        <p>Price: $40</p>
-      </div>
-      <div class="bg-white shadow rounded p-4">
-        <h3 class="text-lg font-bold">Watch</h3>
-        <p>Price: $75</p>
-      </div>
-      <div class="bg-white shadow rounded p-4">
-        <h3 class="text-lg font-bold">Clothes</h3>
-        <p>Price: $25</p>
-      </div>
-      <div class="bg-white shadow rounded p-4">
-        <h3 class="text-lg font-bold">Shoes</h3>
-        <p>Price: $60</p>
-      </div>
-    </div>
-  </section>
+  <!-- In Stock Now Section -->
+  <div class="instock">
+    <h2>✅ In Stock Now</h2>
+    <p>2x AirPods Pro</p>
+    <p>1x iPhone (Series 16)</p>
+  </div>
 
-  <!-- Bulk Deals -->
-  <section class="p-6">
-    <h2 class="text-2xl font-semibold mb-4">📦 Bulk Deals</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <div class="bg-white shadow rounded p-4">
-        <h3 class="text-lg font-bold">Ralph Lauren Knitted</h3>
-        <p>$15 each or $100 for bulk</p>
-      </div>
-      <div class="bg-white shadow rounded p-4">
-        <h3 class="text-lg font-bold">North Face Hoodies</h3>
-        <p>$15 each or $100 for bulk</p>
-      </div>
+  <!-- Product List -->
+  <div class="product-list">
+    <div class="product">
+      <h3>iPhone</h3>
+      <p class="price">$200+ (Depending on model)</p>
     </div>
-  </section>
 
-  <!-- Contact -->
-  <footer class="bg-black text-white p-6 text-center">
-    <p>📲 DM me on TikTok: <strong>@max.glenn41</strong></p>
-    <p>📍 Melbourne, Victoria</p>
-    <p>📞 Phone: 61 451 412 080</p>
-    <p>📧 Email: maxfoilglenn@gmail.com</p>
-    <p>💵 All items must be collected in person with cash</p>
+    <div class="product">
+      <h3>AirPods Pro</h3>
+      <p class="price">$30</p>
+    </div>
+
+    <div class="product">
+      <h3>AirPods Max</h3>
+      <p class="price">$50</p>
+    </div>
+
+    <div class="product">
+      <h3>Sp5der Hoodie</h3>
+      <p class="price">$30</p>
+    </div>
+
+    <div class="product">
+      <h3>Cologne</h3>
+      <p class="price">$30</p>
+    </div>
+
+    <div class="product">
+      <h3>Nike</h3>
+      <p class="price">$40</p>
+    </div>
+
+    <div class="product">
+      <h3>Watch</h3>
+      <p class="price">$75</p>
+    </div>
+
+    <div class="product">
+      <h3>Clothes</h3>
+      <p class="price">$25</p>
+    </div>
+
+    <div class="product">
+      <h3>Shoes</h3>
+      <p class="price">$60</p>
+    </div>
+
+    <div class="product">
+      <h3>Ralph Lauren Knitted</h3>
+      <p class="price">$15 (Bulk: $100)</p>
+    </div>
+
+    <div class="product">
+      <h3>North Face Hoodie</h3>
+      <p class="price">$15 (Bulk: $100)</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact us to place your order!</p>
+    <p>Phone: 61 451 412 080</p>
+    <p>Email: <a href="mailto:maxfoilglenn@gmail.com">maxfoilglenn@gmail.com</a></p>
+    <p>TikTok: <a href="https://www.tiktok.com/@maxglenn_2" target="_blank">@maxglenn_2</a></p>
+    <p><strong>Payment:</strong> Cash in hand, must be collected in person.</p>
+    <p><strong>Location:</strong> Melbourne, Victoria</p>
   </footer>
+
 </body>
 </html>
